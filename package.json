@@ -1,0 +1,67 @@
+{
+	"name": "mharj-auth-module",
+	"version": "0.0.1",
+	"description": "",
+	"main": "./dist/index.js",
+	"scripts": {
+		"test": "mocha",
+		"lint": "eslint src/**/*.ts"
+	},
+	"mocha": {
+		"recursive": true,
+		"exit": true,
+		"require": [
+			"ts-node/register",
+			"source-map-support/register"
+		],
+		"reporters": [
+			"spec",
+			"mocha-junit-reporter"
+		],
+		"extension": [
+			"ts",
+			"js"
+		]
+	},
+	"nyc": {
+		"extension": [
+			".ts"
+		],
+		"include": [
+			"src"
+		],
+		"reporter": [
+			"text",
+			"cobertura"
+		],
+		"all": true
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mharj/auth-module.git"
+	},
+	"author": "mharj",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mharj/auth-module/issues"
+	},
+	"homepage": "https://github.com/mharj/auth-module#readme",
+	"devDependencies": {
+		"@types/chai": "^4.2.22",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^16.10.2",
+		"@typescript-eslint/eslint-plugin": "^4.32.0",
+		"chai": "^4.3.4",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-sonarjs": "^0.10.0",
+		"mocha": "^9.1.2",
+		"prettier": "^2.4.1",
+		"source-map-support": "^0.5.20",
+		"ts-node": "^10.2.1",
+		"typescript": "^4.4.3"
+	}
+}
